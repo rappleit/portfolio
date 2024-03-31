@@ -1,0 +1,173 @@
+.main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../../assets/main/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 105%;
+    height: 105%;
+    background-position: center;
+    filter: brightness(0.8);
+    z-index: -10;
+    transition: background-position ease-in-out;
+}
+
+.content {
+    z-index: 5;
+
+}
+
+.content h1{
+    text-align: center;
+    font-size: 2.8rem;
+    font-style: italic;
+    font-weight: 800;
+    text-shadow: 3px 4px 7px rgba(2, 2, 2, 0.4);
+    font-family: 'Edmund';
+    animation: flicker 2.5s infinite alternate;  
+    margin: 12px 0;
+
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            -0.2rem -0.2rem 1rem rgba(9, 157, 143, 0.25),
+            0.2rem 0.2rem 1rem rgba(9, 157, 143, 0.25),
+            0 0 2rem rgba(9, 157, 143, 0.25),
+            0 0 4rem rgba(9, 157, 143, 0.25),
+            0 0 6rem rgba(9, 157, 143, 0.25),
+            0 0 8rem rgba(9, 157, 143, 0.25),
+            0 0 10rem rgba(9, 157, 143, 0.25);
+    }
+
+    20%, 24%, 55% {
+        text-shadow:
+            -0.2rem -0.2rem 1rem rgba(9, 157, 143, 0.18),
+            0.2rem 0.2rem 1rem rgba(9, 157, 143, 0.18),
+            0 0 2rem rgba(9, 157, 143, 0.18),
+            0 0 4rem rgba(9, 157, 143, 0.18),
+            0 0 6rem rgba(9, 157, 143, 0.18),
+            0 0 8rem rgba(9, 157, 143, 0.18),
+            0 0 10rem rgba(9, 157, 143, 0.18);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-width: 50vw;
+}
+
+.buttonLink {
+    color: var(--text);
+    background: rgba(2, 2, 2, 0.3);
+    border: 2px solid var(--text);
+    height: 50px;
+    width: 50px;
+    font-size: 1.8rem;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+    
+}
+
+.buttonLink:hover {
+    color: var(--bg);
+    background: var(--text);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+    height: 80vh;
+    border: 2px solid var(--text);
+}
+
+.overlay .firstChild {
+    position: absolute;
+    top: 4px;
+    left: 14px;
+}
+
+.overlay .secondChild {
+    position: absolute;
+    text-align: right;
+    top: 4px;
+    right: 14px;
+}
+
+.overlay .thirdChild {
+    position: absolute;
+    bottom: 4px;
+    left: 14px;
+}
+
+.overlay .fourthChild {
+    position: absolute;
+    text-align: right;
+    bottom: 4px;
+    right: 14px;
+}
+
+
+
+@media screen and (min-width: 720px) {
+    .content h1 {
+        font-size: 4rem;
+
+    }
+
+    .buttonLink {
+        height: 80px;
+        width: 80px;
+        font-size: 2.2rem;
+    }
+
+    .overlay p {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .content h1 {
+        font-size: 4rem;
+
+    }
+    .container {
+        gap: 40px;
+    }
+    .buttonLink {
+        height: 64px;
+        width: 64px;
+        font-size: 1.4rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+        margin: 32px
+    }
+    
+
+}

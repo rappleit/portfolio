@@ -1,0 +1,304 @@
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 32px 0;
+}
+
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 80vw;
+
+}
+
+.header::before,
+.header::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: var(--text);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header::before {
+    left: 0;
+}
+
+.header::after {
+    right: 0;
+}
+
+.header h2 {
+    display: inline-block;
+    background-color: #262f3c;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Edmund";
+    padding: 12px;
+    width: 50vw;
+    filter: drop-shadow(0 10px 8px rgba(52, 70, 73, 0.24)) drop-shadow(0 4px 3px rgba(51, 125, 162, 0.4));
+    box-shadow: inset 0 1px 1px 0 rgba(148, 163, 184, 0.4);
+    border-radius: 4px;
+    border: 3px solid #000;
+}
+
+
+.container {
+    width: 75vw;
+
+}
+
+.imgContainer {
+    margin-bottom: 24px;
+    border: 2px solid var(--text);
+    border: 1px solid rgba(206, 208, 242, 0.4);
+    box-shadow: rgba(63, 201, 232, 0.4) 5px 5px, rgba(63, 201, 232, 0.3) 10px 10px, rgba(63, 201, 232, 0.2) 15px 15px;
+}
+
+.container img {
+    filter: brightness(0.8) sepia(0.1);
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.wrapper1 {
+    width: 90vw;
+    border: 1px solid rgba(206, 208, 242, 0.4);    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-light);
+    box-shadow: rgba(30, 101, 130, 0.19) 0px 10px 20px, rgba(30, 101, 130, 0.23) 0px 6px 6px;
+    position: relative;
+    
+
+}
+
+.wrapper1:before {
+    content: "";
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(1px);
+    animation: animateGrain 8s steps(10) infinite;
+}
+
+@keyframes animateGrain {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        background-position: -5% -10%;
+    }
+
+    20%,
+    40% {
+        background-position: -15% -20%;
+    }
+
+    60%,
+    80% {
+        background-position: -15% -20%;
+    }
+}
+
+.wrapper1 h3 {
+    color: var(--bg);
+    margin: 0;
+}
+
+.wrapper1 .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 24px 12px;
+    gap: 8px;
+}
+
+.wrapper1 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.wrapper1 .card .icon svg {
+    height: 48px;
+    width: auto;
+}
+
+.wrapper1 .card h4 {
+    margin: 4px 0;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.wrapper2 {
+    width: 90vw;
+    background: var(--bg-light);
+    position: relative;
+    box-shadow: rgba(36, 131, 169, 0.19) 0px 54px 55px, rgba(36, 131, 169, 0.19) 0px -12px 30px, rgba(36, 131, 169, 0.19) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+}
+
+.wrapper2:before {
+    content: "";
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: animateGrain 8s steps(12) infinite;
+    filter: blur(1px);
+
+}
+
+.wrapper2 h3 {
+    color: var(--bg);
+    margin: 0;
+}
+
+.subheader {
+    margin: 0;
+    background-color: var(--text);
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 0.8rem;
+
+}
+
+.aboutText {
+    margin: 24px;
+    font-size: 0.8rem;
+}
+
+.aboutText a {
+    color: var(--primary);
+}
+
+
+
+@media screen and (min-width: 720px) {
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 95vw;
+        gap: 12px;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .imgContainer {
+        width: 25vw;
+        margin-bottom: 0;
+        
+    }
+
+    .content {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .wrapper1 {
+        width: 14vw;
+        height: 100%;
+    }
+
+    .wrapper1 .list {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .container img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .wrapper2 {
+        width: 45vw;
+        height: 100%;
+    }
+
+    .wrapper2 .subheader {
+        text-align: left;
+    }
+
+    .wrapper2 .subheader h3 {
+        margin-left: 18px;
+    }
+
+    .subheader {
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header h2 {
+        width: 30vw;
+        padding: 12px;
+        font-size: 1.4rem;
+    }
+
+
+    .wrapper1 {
+        width: 10vw;
+    }
+
+    .wrapper1 .list {
+        flex-direction: column;
+    }
+
+    .wrapper1 .card h4 {
+        font-size: 0.8rem;
+    }
+
+    .aboutText {
+        font-size: 1rem;
+    }
+
+
+}

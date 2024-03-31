@@ -1,0 +1,133 @@
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 80vw;
+    
+}
+
+.header::before,
+.header::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: var(--text);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header::before {
+    left: 0;
+}
+
+.header::after {
+    right: 0;
+}
+
+.header h2 {
+    display: inline-block;
+    background-color: #262f3c;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Edmund";
+    padding: 12px;
+    width: 50vw;
+    filter: drop-shadow(0 10px 8px rgba(52, 70, 73, 0.24)) drop-shadow(0 4px 3px rgba(51, 125, 162, 0.4));
+    box-shadow: inset 0 1px 1px 0 rgba(148, 163, 184, 0.4);
+    border-radius: 4px;
+    border: 3px solid #000;
+}
+
+.statsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+.statsCard {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 35vw;
+    background: var(--bg-light);
+    padding: 12px;
+    box-shadow: rgba(36, 131, 169, 0.19) 0px 54px 55px, rgba(36, 131, 169, 0.19) 0px -12px 30px, rgba(36, 131, 169, 0.19) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 1px solid rgba(206, 208, 242, 0.4);    
+
+}
+
+.statsIcon {
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--text);
+    border-radius: 50%;
+}
+
+.statsContent {
+    border-bottom: 1px solid var(--text);
+    flex: 1;
+
+}
+
+.statsContent h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.statsContent p {
+    margin: 2px 0 4px 0;
+    font-size: 0.6rem;
+}
+
+.featuredContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+    .statsCard {
+        width: 18vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .statsIcon {
+        height: 48px;
+        width: 48px;
+        font-size: 24px;
+    }
+    .statsContent h2 {
+        font-size: 1.4rem;
+    }
+
+    .statsContent p {
+        font-size: 0.8rem;
+    }
+    .statsContent {
+        border-width: 2px;
+    }
+
+    .statsCard {
+        gap: 16px;
+    }
+}
