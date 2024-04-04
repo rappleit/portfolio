@@ -117,17 +117,17 @@ const Banner = () => {
                         ]}
                     /></h1>
                 <div className={styles.container}>
-                    <Link to="#">
+                    <Link to="https://www.linkedin.com/in/rachellimruien/">
                         <button className={styles.buttonLink}>
                             <FaLinkedin />
                         </button>
                     </Link>
-                    <Link to="#">
+                    <Link to="https://github.com/rappleit">
                         <button className={styles.buttonLink}>
                             <FaGithub />
                         </button>
                     </Link>
-                    <Link to="#">
+                    <Link to="mailto:rachel.limre03@gmail.com">
                         <button className={styles.buttonLink}>
                             <FaEnvelope />
                         </button>
