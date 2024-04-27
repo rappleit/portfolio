@@ -104,6 +104,16 @@
     align-items: center;
 }
 
+.featuredContainer h2 {
+    margin-top: 32px;
+    margin-bottom: 2px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
 @media screen and (min-width: 720px) {
     .statsCard {
         width: 18vw;

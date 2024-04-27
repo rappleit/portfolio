@@ -3,15 +3,15 @@ import routourist from "../../assets/featured_projects/routouristThumbnail.png"
 import nf from "../../assets/featured_projects/nfThumbnail.png"
 import wth23 from "../../assets/featured_projects/wth23Thumbnail.png"
 import tiktok23 from "../../assets/featured_projects/tiktok23Thumbnail.png"
-
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom"
+
 
 const FeaturedProjects = () => {
 
 
-    const [selected, setSelected] = useState("routourist");
+    const [selected, setSelected] = useState(0);
 
     const featuredProjectsList = {
         routourist: {
@@ -50,7 +50,7 @@ const FeaturedProjects = () => {
         },
         tiktok23: {
             name: "Tiktok Shop",
-            note: "Flutter",
+            note: "Flutter App",
             desc:
                 `
             Our team's reimagination of the Tiktok Shop Tab, complete with community features and gamification. Selected for the Tiktok Hackathon 2023 Top 12 Finalists.
@@ -61,112 +61,46 @@ const FeaturedProjects = () => {
         },
     }
 
+    const handleNext = () => {
+        let maxCount = Object.keys(featuredProjectsList).length;
+        if (selected === maxCount - 1) {
+            setSelected(0);
+        } else {
+            setSelected(selected+1);
+        }
+    }
 
-
-    const selectProject = (project) => {
-        switch (project) {
-            case "routourist":
-                setSelected("routourist")
-                break;
-            case "nf24":
-                setSelected("nf24")
-                break;
-            case "wth23":
-                setSelected("wth23")
-                break;
-            case "tiktok23":
-                setSelected("tiktok23")
-                break;
-            default:
-                setSelected("routourist")
-                break;
-
+    const handleBack = () => {
+        let maxCount = Object.keys(featuredProjectsList).length;
+        if (selected === 0) {
+            setSelected(maxCount-1);
+        } else {
+            setSelected(selected-1);
         }
     }
 
     return (
         <div className={styles.featured_main}>
             <div className={styles.featured_bg}>
-                <img src={featuredProjectsList[selected].thumbnail} alt="" />
+                <img src={featuredProjectsList[Object.keys(featuredProjectsList)[selected]].thumbnail} alt="" />
+            </div>
+            <div className={styles.featured_control}>
+                <button onClick={() => handleBack()}><FaChevronLeft /></button>
+                <p>{selected+1}/{Object.keys(featuredProjectsList).length}</p>
+                <button onClick={() => handleNext()}><FaChevronRight /></button>
             </div>
             <div className={styles.featured_content}>
-                <img src={featuredProjectsList[selected].thumbnail} alt="" className={styles.featured_thumbnail} />
-                <h3 className={styles.featured_title}>{featuredProjectsList[selected].name}</h3>
-                <h4 className={styles.featured_notes}>{featuredProjectsList[selected].note}</h4>
-                <p className={styles.featured_desc}>{featuredProjectsList[selected].desc}</p>
-                <div className={styles.featured_button_container}>
-                {(featuredProjectsList[selected].video != null) ? <a href={featuredProjectsList[selected].video} target="_blank" rel="noreferrer"><button className={styles.featured_button}>Watch Video</button></a> : <></>}            
-                {(featuredProjectsList[selected].demo != null) ? <a href={featuredProjectsList[selected].demo} target="_blank" rel="noreferrer"><button className={styles.featured_button}>View</button></a> : <></>}            
+                <img src={featuredProjectsList[Object.keys(featuredProjectsList)[selected]].thumbnail} alt="" />
+                <div className={styles.featured_text}>
+                    <h3 className={styles.featured_title}>{featuredProjectsList[Object.keys(featuredProjectsList)[selected]].name}</h3>
+                    <p className={styles.featured_note}>{featuredProjectsList[Object.keys(featuredProjectsList)[selected]].note}</p>
+
+                    <p className={styles.featured_desc}>{featuredProjectsList[Object.keys(featuredProjectsList)[selected]].desc}</p>
+                    <div className={styles.featured_buttonContainer}>
+                        {(featuredProjectsList[Object.keys(featuredProjectsList)[selected]].demo) ? <Link className={styles.featured_link} to={featuredProjectsList[Object.keys(featuredProjectsList)[selected]].demo} target="_blank" rel="noopener noreferrer"><button className={styles.featured_demobutton} >Try it out</button></Link> : <></>}
+                        {(featuredProjectsList[Object.keys(featuredProjectsList)[selected]].video) ? <Link className={styles.featured_link} to={featuredProjectsList[Object.keys(featuredProjectsList)[selected]].video} target="_blank" rel="noopener noreferrer"><button className={styles.featured_videobutton}>Watch Video</button></Link> : <></>}
+                    </div>
                 </div>
-              
-            </div>
-
-            <div className={styles.featured_carousel}>
-                <Carousel
-                    additionalTransfrom={0}
-                    arrows
-                    className={styles.featured_carouselComponent}
-                    centerMode
-                    containerClass="featured_carousel"
-                    dotListClass=""
-                    draggable
-                    focusOnSelect={false}
-                    infinite
-                    itemClass="featured_card"
-                    keyBoardControl
-                    minimumTouchDrag={80}
-                    renderArrowsWhenDisabled={false}
-                    renderButtonGroupOutside={true}
-                    renderDotsOutside={false}
-                    responsive={{
-                        desktop: {
-                            breakpoint: {
-                                max: 3000,
-                                min: 1024
-                            },
-                            items: 1,
-                            partialVisibilityGutter: 10
-                        },
-                        mobile: {
-                            breakpoint: {
-                                max: 720,
-                                min: 0
-                            },
-                            items: 1,
-                            partialVisibilityGutter: 10
-                        },
-                        tablet: {
-                            breakpoint: {
-                                max: 1024,
-                                min: 720
-                            },
-                            items: 3,
-                            partialVisibilityGutter: 40
-                        }
-                    }}
-                    rewind={false}
-                    rewindWithAnimation={false}
-                    rtl={false}
-                    shouldResetAutoplay
-                    showDots={true}
-                    sliderClass=""
-                    slidesToSlide={1}
-                    swipeable
-                >
-                    <div className={styles.featured_card}>
-                        <button onClick={() => selectProject("routourist")}><img src={routourist} alt="" /></button>
-                    </div>
-                    <div className={styles.featured_card}>
-                        <button onClick={() => selectProject("nf24")}><img src={nf} alt="" /></button>
-                    </div>
-                    <div className={styles.featured_card}>
-                        <button onClick={() => selectProject("wth23")}><img src={wth23} alt="" /></button>
-                    </div>
-                    <div className={styles.featured_card}>
-                        <button onClick={() => selectProject("tiktok23")}><img src={tiktok23} alt="" /></button>
-                    </div>
-
-                </Carousel>
 
             </div>
 

@@ -36,8 +36,8 @@ const Projects = () => {
                             <FaMobileScreen />
                         </div>
                         <div className={styles.statsContent}>
-                            <h2>01</h2>
-                            <p>Mobile App</p>
+                            <h2>02</h2>
+                            <p>Mobile Apps</p>
                         </div>
                     </div>
                     <div className={styles.statsCard}>
@@ -53,6 +53,7 @@ const Projects = () => {
                 <div className={styles.featuredContainer}>
                     <h2>Featured Projects</h2>
                     <FeaturedProjects />
+
                 </div>
 
             </div>

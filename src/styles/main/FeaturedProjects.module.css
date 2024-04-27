@@ -1,5 +1,5 @@
 .featured_main {
-    margin: 24px 0;
+    margin: 12px 0;
     width: 90vw;
     border: 1px solid var(--text);
     padding: 24px;
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 80vh;
+    height: 70vh;
     justify-content: space-between;
 }
 
@@ -36,128 +36,168 @@
 
 }
 
-.featured_content {
-    margin-bottom: 20px;
+
+.featured_control {
+    position: absolute;
+    bottom: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: space-between;
+    background: #262f3c;
+    padding: 12px 8px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    width: 30vw;
+    transform: translateY(18px);
+    box-shadow: inset 0 1px 1px 0 rgba(148, 163, 184, 0.4);
+    filter: drop-shadow(0 10px 8px rgba(52, 70, 73, 0.24)) drop-shadow(0 4px 3px rgba(51, 125, 162, 0.4));
 }
 
-.featured_thumbnail {
-    height: 20vh;
-    width: auto;
+.featured_control p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+.featured_control button {
+    background: none;
+    color: var(--text);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.featured_content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+}
+
+.featured_content img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.featured_control button:hover {
+    color: var(--secondary);
 }
 
 .featured_title {
-    margin: 8px 0;
+    backdrop-filter: brightness(0.6);
+    padding: 4px 0;
+    font-size: 1rem;
+    margin: 4px 0;
+    margin-top: 8px;
 }
 
-.featured_notes {
-    font-size: 0.8rem;
-    margin: 4px 0;
+.featured_note {
+    font-style: italic;
+    font-size: 0.7rem;
+    padding: 4px;
+    margin: 2px 0;
+
 }
 
 .featured_desc {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
-.featured_button_container {
-    display: flex;
+.featured_demobutton {
+    background: var(--text);
+    color: var(--bg);
+    padding: 8px;
+    border: none;
+    text-shadow: rgba(255,255,255,0.8) 0px 0px 24px;
+    filter: drop-shadow(0 10px 8px rgba(52, 70, 73, 0.24)) drop-shadow(0 4px 3px rgba(51, 125, 162, 0.5));
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+
+
 }
 
-.featured_button {
+.featured_demobutton:hover {
+    filter: brightness(0.9);
+}
+.featured_videobutton {
     background: none;
-    border: 1px solid var(--text);
     color: var(--text);
     padding: 8px;
+    border: none;
+    border: 1px solid var(--primary);
+    text-shadow: rgba(255,255,255,0.7) 0px 0px 30px;
+    filter: drop-shadow(0 10px 8px rgba(52, 70, 73, 0.24)) drop-shadow(0 4px 3px rgba(51, 125, 162, 0.5));
     cursor: pointer;
-    width: 30vw;
     transition: 0.3s;
-    margin-right:16px;
+    width: 100%;
 }
-
-.featured_button:hover {
-    background: var(--text);
+.featured_videobutton:hover {
+    background: var(--primary);
     color: var(--bg);
 }
 
-.featured_carousel {
-    width: 100%;
+.featured_link {
+    width: 40%;
+
 }
 
-.featured_card {
-    width: 35vw;
-    height: 10vh;
-    overflow: hidden;
+.featured_buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 18px 0;
 }
 
-
-.featured_card button {
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-.featured_card img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.featured_carouselComponent {
-    gap: 24px
-}
 
 @media screen and (min-width: 720px) {
     .featured_main {
-        min-height: 60vh
+        height: 60vh;
     }
-    .featured_card {
-        width: 20vw;
+    .featured_content img {
+        width: 60vw;
+    }
+    .featured_main {
+        padding: 48px
     }
 
-    .featured_content {
-        min-height: 40vh;
-    }
-
-    .featured_desc {
-        font-size: 0.8rem;
-    }
     
 }
 @media screen and (min-width: 1024px) {
-    .featured_card {
-        width: 20vw;
-        height: 30vh;
-    }
-
     .featured_main {
-        flex-direction: row;
-        gap: 64px;
+        padding: 24px;
+        height: 80vh;
+
+    }
+    .featured_control {
+        width: 20vw;
+    }
+    .featured_control button {
+        font-size: 16px;
+    }
+    .featured_content {
+        display: flex;
         align-items: center;
-        min-height: 80vh;
+        justify-content: space-evenly;
         
     }
-
-    .featured_content {
-        min-height: 70vh;
-    
-    }
-
-    .featured_carousel {
+    .featured_content img {
         width: 40vw;
     }
 
-    .featured_thumbnail {
-        height: 30vh;
+    .featured_title {
+        font-size: 1.2rem;
+        margin-top: 0;
     }
-
+    .featured_text {
+        width: 35vw;
+    }
+    
     .featured_desc {
-        font-size: 1rem;
+        text-align: left;
     }
 
-    .featured_button {
-        width: 15vw;
+    .featured_note {
+        text-align: left;
+    }
+    .featured_buttonContainer {
+        justify-content: flex-start;
     }
 }
