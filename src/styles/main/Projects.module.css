@@ -71,6 +71,17 @@
 
 }
 
+.archiveLink {
+    color: var(--secondary);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.archiveLink:hover {
+    filter: brightness(2);
+}
+
 .statsIcon {
     font-size: 16px;
     height: 32px;
@@ -110,6 +121,37 @@
     font-size: 1.2rem;
 }
 
+.archiveContainer {
+    margin: 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.archiveContainer img {
+    width: 27vw;
+    filter: brightness(0.8);
+    filter: drop-shadow(0px 3px 16px #03D5DB80);
+}
+
+.archiveContent h2 {
+    font-size: 1.2rem;
+}
+
+.archivePlayer {
+    display: flex;
+    font-size: 0.7rem;
+    align-items: center;
+    gap: 12px;
+    padding: 2px 4px;
+    border: 1px solid var(--secondary);
+}
+
+
+.archivePlayer p {
+    margin: 4px 2px;
+}
+
 
 
 
@@ -118,6 +160,27 @@
     .statsCard {
         width: 18vw;
     }
+
+    .archiveContainer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 48px;
+        margin: 72px 0;
+    }
+
+    .archiveContainer img {
+        width: 25vw;
+    }
+
+    .archiveContent h2 {
+        font-size: 1.4rem;
+    }
+
+    .archivePlayer {
+        font-size: 1rem;
+    }
+
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -131,7 +194,7 @@
     }
 
     .statsContent p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .statsContent {
         border-width: 2px;
@@ -140,4 +203,17 @@
     .statsCard {
         gap: 16px;
     }
+    .archiveContainer {
+        gap: 108px;
+    }
+    .archiveContainer img {
+        width: 20vw;
+    }
+    .archiveContent h2 {
+        font-size: 2rem;
+    }
+
+
+
+    
 }
