@@ -75,9 +75,10 @@ const Projects = () => {
                     <div className={styles.archiveContent}>
                         <h2>View all my projects <Link to="https://github.com/rappleit" target="_blank" rel="noopener noreferrer" className={styles.archiveLink}>here</Link></h2>
                         <div className={styles.archivePlayer}>
-                        <p>{'>'} </p>
+                            <p>{'>'} </p>
                         <TextTransition  inline>{TEXTS[index % TEXTS.length]}</TextTransition>
                         </div>
+                        <p className={styles.archiveNote}>Hi-fidelity mockups, hackathon prototypes, professional projects and more...</p>
                     </div>
                 </div>
 

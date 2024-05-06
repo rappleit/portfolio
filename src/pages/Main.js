@@ -1,4 +1,5 @@
 import Banner from "../components/main/Banner";
+import Experience from "../components/main/Experience";
 import Profile from "../components/main/Profile";
 import Projects from "../components/main/Projects";
 import Tools from "../components/main/Tools";
@@ -11,6 +12,7 @@ const Main = () => {
             <Profile/>
             <Tools/>
             <Projects/>
+            <Experience/>
         </div>
      );
 }

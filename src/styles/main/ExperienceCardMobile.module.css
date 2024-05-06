@@ -1,0 +1,43 @@
+.expcard_main {
+    border: 2px solid var(--secondary);
+    width: 80vw;
+    padding: 12px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    cursor: pointer;
+    background: var(--secondary-light);
+}
+
+.expcard_main h3 {
+    font-size: 1.1rem;
+    margin: 2px 0;
+}
+
+.expcard_main p {
+    font-size: 0.8rem;
+    margin: 2px 0;
+}
+
+.expcard_professional {
+    background: var(--bg-light);
+    border-color: var(--primary);
+}
+
+.expcard_extracurricular {
+    background: var(--secondary-light);
+    border-color: var(--secondary);
+}
+
+.expcard_date {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.expcard_content {
+    font-size: 0.8rem;
+}
+
+.expcard_content li {
+    margin: 12px 0;
+}

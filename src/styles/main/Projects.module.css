@@ -3,9 +3,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .header {
     text-align: center;
@@ -71,11 +76,15 @@
 
 }
 
+
 .archiveLink {
     color: var(--secondary);
     text-decoration: underline;
     cursor: pointer;
     transition: 0.2s;
+    text-shadow: 3px 3px 20px #FA75C8;
+
+
 }
 
 .archiveLink:hover {
@@ -126,6 +135,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80vw;
+
 }
 
 .archiveContainer img {
@@ -136,6 +147,7 @@
 
 .archiveContent h2 {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .archivePlayer {
@@ -151,6 +163,12 @@
 .archivePlayer p {
     margin: 4px 2px;
 }
+
+.archiveNote {
+    font-size: 0.5rem;
+    font-style: italic;
+}
+
 
 
 
@@ -213,7 +231,9 @@
         font-size: 2rem;
     }
 
-
+    .archiveNote {
+        font-size: 0.6rem;
+    }
 
     
 }
