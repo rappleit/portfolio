@@ -104,3 +104,204 @@
     border-color: var(--secondary) !important;
 
 }
+
+/* Tablet + Desktop */
+
+.content {
+    display: none;
+    width: 95vw;
+    height: 40vh;
+}
+
+.selectorMenu {
+    width: 30vw;
+    border-left: 6px solid var(--text);
+    border-top: 3px solid var(--text);
+    padding: 20px 18px;
+    border-bottom: 24px solid var(--text);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.selectorButtons {
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 18px;
+
+}
+
+.selectorButtons button {
+    width: 50%;
+    background: none;
+    color: var(--text);
+    border: 1px solid var(--text);
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 8px 6px;
+}
+
+.selectorList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+
+.experienceCard {
+    border: 2px solid var(--secondary);
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    cursor: pointer;
+}
+
+.experienceCard h3 {
+    font-size: 0.9rem;
+    margin: 2px 0;
+}
+
+.experienceCard p {
+    font-size: 0.7rem;
+    margin: 2px 0;
+}
+
+.experienceCardProfessional {
+    border-color: var(--primary);
+}
+
+.experienceCardExtracurricular {
+    border-color: var(--secondary);
+}
+
+.experienceCardDate {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.contentContainer {
+    height: 100%;
+    border: 1px solid var(--text);
+    width: 50vw;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-light);
+}
+
+.contentHeader {
+    background: var(--text);
+    border-radius: 8px 8px 0 0;
+    padding: 10px 12px;
+}
+
+.contentHeader h3 {
+    margin: 0;
+    color: var(--bg);
+    font-size: 0.9rem;
+}
+
+.contentBody {
+    padding: 10px 12px;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-bottom: 48px;
+}
+
+.contentBody h2 {
+    font-size: 1.1rem;
+    margin: 4px 0;
+}
+
+.contentBody p {
+    font-size: 0.9rem;
+    margin: 2px 0;
+}
+
+.contentBodyDuration {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.contentBodySubtitle {
+    font-size: 0.8rem !important;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.contentBodyDetails {
+    padding-left: 3rem;
+    font-size: 0.9rem;
+}
+
+.selectedCard {
+    border-color: var(--tertiary);
+    background: var(--tertiary-light);
+    color: var(--bg);
+    filter: drop-shadow(0 10px 8px rgba(85, 77, 49, 0.48)) drop-shadow(0 4px 3px rgba(183, 168, 53, 0.7));
+
+}
+
+
+@media screen and (min-width: 720px) {
+    .selector_mobile {
+        display: none;
+    }
+    .content_mobile {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 1024px) { 
+    .content {
+        height: 80vh;
+    }
+    .selectorMenu {
+        padding: 24px;
+        width: 25vw;
+    }
+
+    .selectorList {
+        gap: 28px;
+    }
+    .selectorButtons button {
+        font-size: 1rem;
+    }
+
+    .experienceCard h3 {
+        font-size: 1.1rem;
+    }
+
+    .experienceCard p {
+        font-size: 1rem;
+    } 
+    .contentHeader h3 {
+        font-size: 1.1rem;
+    }
+
+    .contentBody h2 {
+        font-size: 1.2rem;
+    }
+
+    .contentBody p {
+        font-size: 1rem;
+    }
+    .contentBodyDetails {
+        font-size: 1rem;
+    }
+}
