@@ -274,6 +274,7 @@
     .selectorMenu {
         padding: 24px;
         width: 25vw;
+        border-left: 4px solid var(--text);
     }
 
     .selectorList {
