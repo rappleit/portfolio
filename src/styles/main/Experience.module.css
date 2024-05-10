@@ -210,7 +210,7 @@
 }
 
 .contentBody {
-    padding: 10px 12px;
+    padding: 12px;
     height: 100%;
     overflow-y: auto;
     box-sizing: border-box;
@@ -244,10 +244,8 @@
 }
 
 .selectedCard {
-    border-color: var(--tertiary);
-    background: var(--tertiary-light);
-    color: var(--bg);
-    filter: drop-shadow(0 10px 8px rgba(85, 77, 49, 0.48)) drop-shadow(0 4px 3px rgba(183, 168, 53, 0.7));
+    background: var(--bg-light);
+    filter: drop-shadow(0 10px 8px rgba(52, 70, 73, 0.48)) drop-shadow(0 4px 3px rgba(51, 125, 162, 0.7));
 
 }
 
@@ -293,6 +291,10 @@
     } 
     .contentHeader h3 {
         font-size: 1.1rem;
+    }
+
+    .contentBody {
+        padding: 22px;
     }
 
     .contentBody h2 {
