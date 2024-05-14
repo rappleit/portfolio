@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+
+import { Illuminator } from "@arwes/react";
 import Banner from "../components/main/Banner";
 import Experience from "../components/main/Experience";
 import Profile from "../components/main/Profile";
@@ -6,15 +9,20 @@ import Tools from "../components/main/Tools";
 import styles from "../styles/main/Main.module.css"
 
 const Main = () => {
-    return ( 
+    return (
         <div className={styles.page}>
-            <Banner/>
-            <Profile/>
-            <Tools/>
-            <Projects/>
-            <Experience/>
+            <Illuminator
+                color='hsl(180 50% 50% / 10%)'
+                size={300}
+                className={styles.illuminator}
+            />
+            <Banner />
+            <Profile />
+            <Tools />
+            <Projects />
+            <Experience />
         </div>
-     );
+    );
 }
- 
+
 export default Main;

@@ -12,7 +12,7 @@
     margin-bottom: 20px;
     position: relative;
     width: 80vw;
-    
+
 }
 
 .header::before,
@@ -51,12 +51,14 @@
     border-radius: 4px;
     border: 3px solid var(--text);
 }
+
 .professionalSelected {
     background: var(--primary) !important;
     border-color: var(--primary) !important;
     color: var(--bg) !important;
     filter: drop-shadow(0 10px 8px rgba(52, 70, 73, 0.48)) drop-shadow(0 4px 3px rgba(51, 125, 162, 0.7));
 }
+
 .extracurricularSelected {
     background: var(--secondary) !important;
     border-color: var(--secondary) !important;
@@ -72,6 +74,7 @@
     gap: 16px;
     margin: 4px 0 24px 0;
 }
+
 .selector_mobile button {
     width: 50%;
     background: none;
@@ -190,11 +193,11 @@
 
 .contentContainer {
     height: 100%;
-    border: 1px solid var(--text);
     width: 50vw;
     border-radius: 8px;
     overflow: hidden;
-    background: var(--bg-light);
+    position: relative;
+    padding: 0 14px;
 }
 
 .contentHeader {
@@ -242,6 +245,16 @@
     padding-left: 3rem;
     font-size: 0.9rem;
 }
+.contentBodyDetails li {
+    margin: 8px 0;
+}
+.contentBodyDetails span {
+    vertical-align: text-top;
+}
+
+
+
+
 
 .selectedCard {
     background: var(--bg-light);
@@ -254,6 +267,7 @@
     .selector_mobile {
         display: none;
     }
+
     .content_mobile {
         display: none;
     }
@@ -265,10 +279,11 @@
     }
 }
 
-@media screen and (min-width: 1024px) { 
+@media screen and (min-width: 1024px) {
     .content {
         height: 80vh;
     }
+
     .selectorMenu {
         padding: 24px;
         width: 25vw;
@@ -278,6 +293,7 @@
     .selectorList {
         gap: 28px;
     }
+
     .selectorButtons button {
         font-size: 1rem;
     }
@@ -288,7 +304,8 @@
 
     .experienceCard p {
         font-size: 1rem;
-    } 
+    }
+
     .contentHeader h3 {
         font-size: 1.1rem;
     }
@@ -304,6 +321,7 @@
     .contentBody p {
         font-size: 1rem;
     }
+
     .contentBodyDetails {
         font-size: 1rem;
     }

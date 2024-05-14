@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import styles from "../../styles/main/Projects.module.css"
 import { CgWebsite } from "react-icons/cg";
 import { FaMobileScreen } from "react-icons/fa6";
@@ -8,6 +10,7 @@ import { useEffect, useState } from "react";
 import archive from "../../assets/main/archive.png"
 import TextTransition, { presets } from 'react-text-transition';
 import { Link } from "react-router-dom";
+import { Dots, FrameSVGCorners } from "@arwes/react";
 const Projects = () => {
 
 
@@ -15,11 +18,11 @@ const Projects = () => {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-      const intervalId = setInterval(
-        () => setIndex((index) => index + 1),
-        3000, // every 3 seconds
-      );
-      return () => clearTimeout(intervalId);
+        const intervalId = setInterval(
+            () => setIndex((index) => index + 1),
+            3000, // every 3 seconds
+        );
+        return () => clearTimeout(intervalId);
     }, []);
 
     return (
@@ -30,6 +33,17 @@ const Projects = () => {
             <div className={styles.content}>
                 <div className={styles.statsContainer}>
                     <div className={styles.statsCard}>
+                        <FrameSVGCorners
+                            strokeWidth={2}
+                            css={{
+                                '[data-name=bg]': {
+                                    color: 'rgb(256,256,256, 0)'
+                                },
+                                '[data-name=line]': {
+                                    color: 'hsl(180, 75%, 50%)'
+                                }
+                            }}
+                        />
                         <div className={styles.statsIcon}>
                             <CgWebsite />
                         </div>
@@ -39,6 +53,17 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className={styles.statsCard}>
+                        <FrameSVGCorners
+                            strokeWidth={2}
+                            css={{
+                                '[data-name=bg]': {
+                                    color: 'rgb(256,256,256, 0)'
+                                },
+                                '[data-name=line]': {
+                                    color: 'hsl(180, 75%, 50%)'
+                                }
+                            }}
+                        />
                         <div className={styles.statsIcon}>
                             <FaLaptopCode />
                         </div>
@@ -48,6 +73,17 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className={styles.statsCard}>
+                        <FrameSVGCorners
+                            strokeWidth={2}
+                            css={{
+                                '[data-name=bg]': {
+                                    color: 'rgb(256,256,256, 0)'
+                                },
+                                '[data-name=line]': {
+                                    color: 'hsl(180, 75%, 50%)'
+                                }
+                            }}
+                        />
                         <div className={styles.statsIcon}>
                             <FaMobileScreen />
                         </div>
@@ -57,6 +93,17 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className={styles.statsCard}>
+                        <FrameSVGCorners
+                            strokeWidth={2}
+                            css={{
+                                '[data-name=bg]': {
+                                    color: 'rgb(256,256,256, 0)'
+                                },
+                                '[data-name=line]': {
+                                    color: 'hsl(180, 75%, 50%)'
+                                }
+                            }}
+                        />
                         <div className={styles.statsIcon}>
                             <IoExtensionPuzzle />
                         </div>
@@ -71,12 +118,16 @@ const Projects = () => {
                     <FeaturedProjects />
                 </div>
                 <div className={styles.archiveContainer}>
+                    <Dots
+                    style={{zIndex: -20}}
+                        color='hsla(180, 100%, 75%, 0.1)'
+                    />
                     <img src={archive} alt="" />
                     <div className={styles.archiveContent}>
                         <h2>View all my projects <Link to="/projects" className={styles.archiveLink}>here</Link></h2>
                         <div className={styles.archivePlayer}>
                             <p>{'>'} </p>
-                        <TextTransition  inline>{TEXTS[index % TEXTS.length]}</TextTransition>
+                            <TextTransition inline>{TEXTS[index % TEXTS.length]}</TextTransition>
                         </div>
                         <p className={styles.archiveNote}>Hi-fidelity mockups, hackathon prototypes, professional projects and more...</p>
                     </div>

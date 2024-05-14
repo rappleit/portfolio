@@ -1,11 +1,15 @@
-import { useState } from "react";
+/** @jsxImportSource @emotion/react */
+
+import { useEffect, useState } from "react";
 import styles from "../../styles/main/Experience.module.css"
 import ExperienceCardMobile from "./ExperienceCardMobile";
+import { Animator, FrameSVGKranox, Text } from "@arwes/react";
 
 const Experience = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("professional");
     const [expandedIndex, setExpandedIndex] = useState(null);
+
 
     const handleCategoryChange = () => {
         if (selectedCategory === "professional") {
@@ -140,6 +144,17 @@ const Experience = () => {
                     </div>
                 </div>
                 <div className={`${styles.contentContainer}`}>
+                    <FrameSVGKranox
+                        css={{
+                            '[data-name=bg]': {
+                                color: 'hsl(180, 75%, 10%)'
+
+                            },
+                            '[data-name=line]': {
+                                color: 'hsl(180, 75%, 50%)'
+                            }
+                        }}
+                    />
                     <div className={styles.contentHeader}>
                         <h3>{'>'} Experience</h3>
                     </div>
@@ -148,31 +163,81 @@ const Experience = () => {
                             <>
                                 {(selectedCategory === "professional") ?
                                     <>
-                                        <h2>{professionalExperienceList[expandedIndex].title}</h2>
-                                        <p className={styles.contentBodyTeam}>{professionalExperienceList[expandedIndex].team}</p>
-                                        <p className={styles.contentBodyDuration}>{professionalExperienceList[expandedIndex].duration}</p>
-                                        <p className={styles.contentBodySubtitle}>{(professionalExperienceList[expandedIndex].subtitle != null) ? professionalExperienceList[expandedIndex].subtitle : ""}</p>
-                                        <ul className={styles.contentBodyDetails}>
-                                            {professionalExperienceList[expandedIndex].content.map((item, i) => (
-                                                <li key={i}>{item}</li>
-                                            ))}
-                                        </ul>
+                                        <Animator combine manager='stagger'>
+                                            <Animator>
+                                                <Text as='h2'>
+                                                    {professionalExperienceList[expandedIndex].title}
+                                                </Text>
+                                            </Animator>
+                                            <Animator>
+                                                <Text as='p' className={styles.contentBodyTeam}>
+                                                    {professionalExperienceList[expandedIndex].team}
+                                                </Text>
+                                            </Animator>
+                                            <Animator>
+                                                <Text as='p' className={styles.contentBodyDuration}>
+                                                    {professionalExperienceList[expandedIndex].duration}</Text>
+                                            </Animator>
+                                            <Animator>
+                                                <Text as='p' className={styles.contentBodySubtitle}>
+                                                    {(professionalExperienceList[expandedIndex].subtitle != null) ? professionalExperienceList[expandedIndex].subtitle : ""}                                        </Text>
+                                            </Animator>
+                                            <ul className={styles.contentBodyDetails}>
+                                                {professionalExperienceList[expandedIndex].content.map((item, i) => (
+                                                   <Animator key={i}>
+                                                   <li>
+                                                        <Text as='p'>
+                                                            {item}
+                                                        </Text>
+                                                    </li>
+                                                    </Animator>
+
+                                                ))}
+                                            </ul>
+                                        </Animator>
+
                                     </>
                                     :
                                     <>
-                                        <h2>{extracurricularExperienceList[expandedIndex].title}</h2>
-                                        <p className={styles.contentBodyTeam}>{extracurricularExperienceList[expandedIndex].team}</p>
-                                        <p className={styles.contentBodyDuration}>{extracurricularExperienceList[expandedIndex].duration}</p>
-                                        <p className={styles.contentBodySubtitle}>{(extracurricularExperienceList[expandedIndex].subtitle != null) ? extracurricularExperienceList[expandedIndex].subtitle : ""}</p>
+                                        <Animator combine manager='stagger'>
+                                            <Animator>
+
+                                                <Text as='h2'>
+                                                    {extracurricularExperienceList[expandedIndex].title}
+                                                </Text>
+                                            </Animator>
+                                            <Animator>
+                                                <Text as='p' className={styles.contentBodyTeam}>
+                                                    {extracurricularExperienceList[expandedIndex].team}
+                                                </Text>
+                                            </Animator>
+                                            <Animator>
+                                                <Text as='p' className={styles.contentBodyDuration}>
+                                                    {extracurricularExperienceList[expandedIndex].duration}
+                                                </Text>
+                                            </Animator>
+                                            <Animator>
+                                                <Text as='p' className={styles.contentBodySubtitle}>
+                                                    {(extracurricularExperienceList[expandedIndex].subtitle != null) ? extracurricularExperienceList[expandedIndex].subtitle : ""}
+                                                </Text>
+                                            </Animator>
+                                        </Animator>
+
                                         <ul className={styles.contentBodyDetails}>
                                             {extracurricularExperienceList[expandedIndex].content.map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                               <Animator key={i}>
+                                               <li>
+                                                    <Text as='p'>
+                                                        {item}
+                                                    </Text>
+                                                </li>
+                                                </Animator>
                                             ))}
                                         </ul>
                                     </>
                                 }
                             </>
-                            : 
+                            :
                             <p>Please select an item</p>
                         }
                     </div>
