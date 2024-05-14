@@ -1,0 +1,223 @@
+.main {
+    width: 90vw;
+    overflow-y: hidden;
+
+}
+
+.tableContainer {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+
+}
+
+.tableWrapper {
+    height: 45vh;
+    overflow: auto;
+}
+
+
+
+.table {
+
+    width: 100%;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+}
+
+.table th,
+td {
+    padding-right: 18px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.table th {
+    text-align: left;
+    padding-bottom: 8px;
+    padding: 12px;
+
+
+}
+
+.table thead {
+    background: var(--bg-light) !important;
+}
+
+
+.table td {
+    font-size: 0.75rem;
+    vertical-align: baseline;
+    padding: 18px 12px;
+
+}
+
+
+.table tbody tr {
+    border-bottom: 1px solid var(--text-light) !important;
+    cursor: pointer;
+    -webkit-box-shadow: -1px 2px 15px 2px rgba(250, 250, 250, 0.2);
+    box-shadow: -1px 2px 15px 2px rgba(250, 250, 250, 0.2);
+
+}
+
+.table tbody tr:hover {
+    background: var(--bg-light);
+}
+
+.table tbody tr td:nth-child(2) {
+    color: var(--primary);
+}
+
+.detailContainer {
+    position: relative;
+    margin-bottom: 18px;
+    height: 28vh;
+}
+
+.detailWrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 12px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailHeader {
+    width: 28vw;
+    position: relative;
+}
+
+.detailThumbnail {
+    width: 100%;
+}
+
+.detailTitle {
+    position: relative;
+    padding-right: 14px;
+    margin-bottom: 4px;
+
+}
+
+.detailTitle h3 {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.detailContent {
+    width: 50vw;
+}
+
+.detailContent p {
+    font-size: 0.8rem;
+    margin: 4px 0;
+}
+
+.detailTags {
+    color: var(--primary);
+}
+
+.detailTags span {
+    color: var(--text);
+    font-weight: bold;
+}
+
+.detailButtons {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+
+.detailButtonLink {
+    width: 42%;
+
+}
+
+.detailButton {
+    width: 100%;
+    background: var(--bg-light);
+    border: solid 2px var(--primary);
+    color: var(--text);
+    padding: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+}
+
+.detailButton:hover {
+    filter: brightness(1.4);
+}
+
+.detailMessage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    text-align: center;
+}
+
+.detailMessageIcon {
+    font-size: 4rem;
+}
+
+
+.selectedRow {
+    background: var(--bg-light) !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 80vh;
+    }
+
+    .detailContainer {
+        width: 35vw;
+        height: 100%;
+
+    }
+
+    .detailWrapper {
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 48px;
+        justify-content: flex-start;
+    }
+
+    .detailButtons {
+        margin: 16px 0;
+    }
+
+    .detailHeader {
+        width: 100%;
+    }
+
+    .detailContent {
+        width: 100%;
+
+    }
+
+    .tableContainer {
+        width: 50vw;
+    }
+
+    .tableWrapper {
+        height: 100%;
+    }
+}

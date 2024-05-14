@@ -4,6 +4,7 @@ import styles from "../styles/projects/ProjectsPage.module.css"
 import { FrameSVGNefrex } from '@arwes/react-frames';
 import { FaGithub } from "react-icons/fa";
 import ProjectsListMin from "../components/projects/ProjectsListMin";
+import ProjectsList from "../components/projects/ProjectsList";
 const ProjectsPage = () => {
     return (
         <div className={styles.page}>
@@ -40,6 +41,9 @@ const ProjectsPage = () => {
             </Link>
             <div className={styles.mobileContent}>
                 <ProjectsListMin/>
+            </div>
+            <div className={styles.nonMobileContent}>
+                <ProjectsList/>
             </div>
         </div>
     );
