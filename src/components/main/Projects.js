@@ -43,7 +43,7 @@ const Projects = () => {
                             <FaLaptopCode />
                         </div>
                         <div className={styles.statsContent}>
-                            <h2>03</h2>
+                            <h2>05</h2>
                             <p>Web Applications</p>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ const Projects = () => {
                             <FaMobileScreen />
                         </div>
                         <div className={styles.statsContent}>
-                            <h2>02</h2>
+                            <h2>03</h2>
                             <p>Mobile Apps</p>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ const Projects = () => {
                 <div className={styles.archiveContainer}>
                     <img src={archive} alt="" />
                     <div className={styles.archiveContent}>
-                        <h2>View all my projects <Link to="https://github.com/rappleit" target="_blank" rel="noopener noreferrer" className={styles.archiveLink}>here</Link></h2>
+                        <h2>View all my projects <Link to="/projects" className={styles.archiveLink}>here</Link></h2>
                         <div className={styles.archivePlayer}>
                             <p>{'>'} </p>
                         <TextTransition  inline>{TEXTS[index % TEXTS.length]}</TextTransition>

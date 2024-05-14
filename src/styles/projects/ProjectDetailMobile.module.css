@@ -1,0 +1,79 @@
+.projModalMain {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 80;
+    position: relative;
+}
+
+.projModalContent {
+    position: relative;
+    margin: 2px 28px 16px 28px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+}
+.projModalThumbnail {
+    width: 100%;
+}
+
+.projModalClose {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.4rem;
+    align-self: flex-end;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.projModalHeader {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.projModalHeader h3 {
+    margin: 14px 12px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.projModalContent p {
+    font-size: 0.8rem;
+    align-self: flex-start;
+    margin: 2px 0;
+}
+
+
+.projModalTags {
+    color: var(--primary);
+    width: 100%;
+    margin: 8px 0;
+}
+
+.projModalTags span {
+    color: var(--text);
+    font-weight: bold;
+}
+
+.projModalButtons {
+    margin: 8px 0;
+    width: 100%;
+}
+
+.projModalButton  {
+    position: relative;
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text);
+    padding: 8px;
+    height: 2.4rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 8px 0;
+}

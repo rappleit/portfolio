@@ -1,0 +1,46 @@
+.main {
+    position: relative;
+    width: 90vw;
+    box-sizing: border-box;
+    padding: 4px 12px;
+    margin-bottom: 32px;
+
+}
+
+.table {
+    width: 100%;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+}
+
+.table th, td {
+    padding-right: 18px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.table th {
+    text-align: left;
+    padding-bottom: 8px;
+
+}
+
+.table td {
+    font-size: 0.75rem;
+    vertical-align: baseline;
+}
+
+
+.table tbody tr {
+    border-bottom: 1px solid var(--text-light) !important;
+    
+}
+
+.table tbody tr td:nth-child(2){
+    color: var(--primary);
+    text-decoration: underline;
+    cursor: pointer;
+
+}
