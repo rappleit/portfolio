@@ -8,6 +8,7 @@ import Projects from "../components/main/Projects";
 import Tools from "../components/main/Tools";
 import styles from "../styles/main/Main.module.css"
 import Explore from "../components/main/Explore";
+import Footer from "../components/main/Footer";
 
 const Main = () => {
     return (
@@ -23,6 +24,7 @@ const Main = () => {
             <Projects />
             <Experience />
             <Explore />
+            <Footer/>
         </div>
     );
 }

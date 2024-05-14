@@ -93,7 +93,7 @@
 }
 
 .cardItem:hover {
-    filter: brightness(1.4);
+    filter: brightness(1.8);
 }
 
 .cardItem h2 {
@@ -104,6 +104,10 @@
 
 
 @media screen and (min-width: 720px) {
+    .main {
+        min-height: 30vh;
+
+    }
     .viewer {
         display: block;
     }
@@ -122,8 +126,17 @@
 }
 
 @media screen and (min-width: 1024px) {
+
+    .main {
+        min-height: 20vh;
+
+    }
     .cardContainer {
         width: 36vw;
+    }
+
+    .cardItem h2 {
+        font-size: 1.2rem;
     }
     
 }
