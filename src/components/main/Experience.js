@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/main/Experience.module.css"
 import ExperienceCardMobile from "./ExperienceCardMobile";
-import { Animator, FrameSVGKranox, Text } from "@arwes/react";
+import { Animator, FrameSVGKranox, GridLines, Text } from "@arwes/react";
 
 const Experience = () => {
 
@@ -92,6 +92,7 @@ const Experience = () => {
     ]
     return (
         <div className={styles.main}>
+            
             <div className={styles.header}>
                 <h2>My Experience</h2>
             </div>
@@ -184,12 +185,12 @@ const Experience = () => {
                                             </Animator>
                                             <ul className={styles.contentBodyDetails}>
                                                 {professionalExperienceList[expandedIndex].content.map((item, i) => (
-                                                   <Animator key={i}>
-                                                   <li>
-                                                        <Text as='p'>
-                                                            {item}
-                                                        </Text>
-                                                    </li>
+                                                    <Animator key={i}>
+                                                        <li>
+                                                            <Text as='p'>
+                                                                {item}
+                                                            </Text>
+                                                        </li>
                                                     </Animator>
 
                                                 ))}
@@ -225,12 +226,12 @@ const Experience = () => {
 
                                         <ul className={styles.contentBodyDetails}>
                                             {extracurricularExperienceList[expandedIndex].content.map((item, i) => (
-                                               <Animator key={i}>
-                                               <li>
-                                                    <Text as='p'>
-                                                        {item}
-                                                    </Text>
-                                                </li>
+                                                <Animator key={i}>
+                                                    <li>
+                                                        <Text as='p'>
+                                                            {item}
+                                                        </Text>
+                                                    </li>
                                                 </Animator>
                                             ))}
                                         </ul>

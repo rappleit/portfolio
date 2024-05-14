@@ -5,10 +5,17 @@ import picture from "../../assets/main/profile_pic.jpg"
 import { MdOutlineWeb, MdDesignServices } from "react-icons/md";
 import { IoMdPhonePortrait } from "react-icons/io";
 import { FrameSVGNefrex } from '@arwes/react-frames';
+import { Animator, GridLines } from "@arwes/react";
 
 const Profile = () => {
     return (
         <div className={styles.main}>
+            <Animator duration={{ enter: 0.5, exit: 0.5 }}>
+                <GridLines
+                    lineColor='hsla(180, 100%, 75%, 0.1)'
+                    style={{zIndex: -30}}
+                />
+            </Animator>
             <div className={styles.header}>
                 <h2>Profile</h2>
             </div>
@@ -77,6 +84,9 @@ const Profile = () => {
                             <p>
                                 I am currently a Computer Science and Design undergraduate and Technology Entrepreneur Scholar at
                                 the <a href="https://sutd.edu.sg/" target="_blank">Singapore University of Technology and Design (SUTD)</a>.
+                            </p>
+                            <p>
+                                In my free time, you'll probably find me drawing, playing the piano, practicing Karate, or of course, petting cats :D
                             </p>
                         </div>
                     </div>

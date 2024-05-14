@@ -7,6 +7,7 @@ import Profile from "../components/main/Profile";
 import Projects from "../components/main/Projects";
 import Tools from "../components/main/Tools";
 import styles from "../styles/main/Main.module.css"
+import Explore from "../components/main/Explore";
 
 const Main = () => {
     return (
@@ -21,6 +22,7 @@ const Main = () => {
             <Tools />
             <Projects />
             <Experience />
+            <Explore />
         </div>
     );
 }
