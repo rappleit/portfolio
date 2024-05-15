@@ -101,21 +101,7 @@ const Banner = () => {
 
             </div>
             <div className={styles.content}>
-                <h1><Descramble
-                        autoStart
-                        text="Hi, I'm Rachel"
-                        steps={[
-                            {
-                                roll: 10,
-                                action: '+',
-                                type: 'all',
-                            },
-                            {
-                                action: '-',
-                                type: 'forward',
-                            },
-                        ]}
-                    /></h1>
+                <h1>Hi, I'm Rachel</h1>
                 <div className={styles.container}>
                     <Link to="https://www.linkedin.com/in/rachellimruien/">
                         <button className={styles.buttonLink}>
