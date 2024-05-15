@@ -90,6 +90,8 @@
     align-items: center;
     gap: 20px;
     cursor: pointer;
+    font-family: "JetBrains Mono" !important;
+
 }
 
 .cardItem:hover {

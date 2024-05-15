@@ -110,7 +110,7 @@ const Explore = () => {
                             />
                             <IoDocumentTextSharp size={24} />
                             <div className={styles.cardItemText}>
-                                <h2>View my resume</h2>
+                                <h2>View my Résumé</h2>
                             </div>
                         </button>
                     </Link>
