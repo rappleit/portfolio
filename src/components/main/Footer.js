@@ -12,7 +12,8 @@ const Footer = () => {
                     top: 0,
                     bottom: 0,
                     backgroundColor: '#080b13',
-                    backgroundImage: 'radial-gradient(85% 85% at 50% 50%, hsla(185, 100%, 25%, 0.16) 0%, hsla(185, 100%, 25%, 0.08) 30%, hsla(185, 100%, 25%, 0) 60%)'
+                    backgroundImage: 'radial-gradient(85% 85% at 50% 50%, hsla(185, 100%, 25%, 0.16) 0%, hsla(185, 100%, 25%, 0.08) 30%, hsla(185, 100%, 25%, 0) 60%)',
+                    zIndex: -30
                 }}>
 
                     <Dots
