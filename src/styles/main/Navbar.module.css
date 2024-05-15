@@ -1,0 +1,162 @@
+.main {
+    position: fixed;
+    top: 50%;
+    z-index: 30;
+    transform: translateY(-50%);
+    display: none;
+    margin-left: 12px;
+}
+
+.main ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.main li {
+    margin: 16px 0;
+
+}
+
+.main button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    gap: 12px;
+}
+
+
+.navItem {
+    width: 12px;
+    height: 12px;
+    background: var(--text);
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.main button:hover .navLabel {
+    opacity: 1;
+    visibility: visible;
+    color: var(--text);
+}
+
+.main button:hover .navItem {
+    transform: scale(1.8);
+    transition: 0.3s;
+}
+
+.navLabel {
+    transition: 0.3s;
+}
+
+
+.navLabel {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 6px;
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.navSelected {
+    background: var(--secondary);
+    transform: scale(1.8);
+    -webkit-box-shadow: 0px 0px 7px 3px rgba(223, 32, 185, 0.6);
+    -moz-box-shadow: 0px 0px 7px 3px rgba(223, 32, 185, 0.6);
+    box-shadow: 0px 0px 7px 3px rgba(223, 32, 185, 0.6);
+
+}
+
+.scrollIndicator {
+    writing-mode: vertical-rl;
+    margin: 0;
+    position: absolute;
+    bottom: -100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+
+.scrollIndicator.show {
+    animation: fadeIn 0.5s forwards;
+}
+
+.scrollIndicator.hide {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    20% {
+        opacity: 1;
+        visibility: visible;
+    }
+    80% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.showLabel {
+    animation: fadeInOut 2s forwards;
+}
+
+@media screen and (min-width: 720px) {
+    .main {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .scrollIndicator {
+        font-size: 0.8rem;
+    }
+    .main {
+        margin-left: 24px;
+    }
+    .navItem {
+        width: 10px;
+        height: 10px;
+    }
+    .navSelected {
+        transform: scale(1.4);
+    }
+    .main button:hover .navItem {
+        transform: scale(1.4);
+
+    }
+
+}

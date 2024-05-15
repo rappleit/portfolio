@@ -183,7 +183,7 @@ td {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        height: 80vh;
+        height: 94vh;
     }
 
     .detailContainer {

@@ -1,16 +1,38 @@
 /** @jsxImportSource @emotion/react */
 
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import styles from "../../styles/main/Explore.module.css"
-import { Suspense, useEffect } from "react";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Suspense, useEffect, useRef } from "react";
+import { Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Model } from "./Model";
 import { Animator, FrameSVGLines, FrameSVGNefrex, FrameSVGUnderline, GridLines } from "@arwes/react";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoDocumentTextSharp } from "react-icons/io5";
 const Explore = () => {
+    const RotatingGroup = () => {
+        const groupRef = useRef();
 
+        useFrame(() => {
+            if (groupRef.current) {
+                groupRef.current.rotation.y += 0.001; // Adjust the rotation speed
+            }
+        });
+
+        return (
+            <group ref={groupRef}>
+                <PerspectiveCamera
+                    makeDefault={true}
+                    far={100}
+                    near={0.1}
+                    fov={38}
+                    position={[5.219, 4.035, 12.839]}
+                    rotation={[-0.018, 0.39, 0.007]}
+
+                />
+            </group>
+        );
+    };
 
     return (
         <div className={styles.main}>
@@ -27,6 +49,7 @@ const Explore = () => {
                     </Animator>
                     <Canvas >
                         <Suspense fallback={null}>
+                            <RotatingGroup />
                             <Model />
                             <OrbitControls />
                             <Environment preset="sunset" />
@@ -66,14 +89,14 @@ const Explore = () => {
                                     }
                                 }}
                             />
-                            <FaLinkedin  size={24} />
+                            <FaLinkedin size={24} />
                             <div className={styles.cardItemText}>
                                 <h2>Connect on Linkedin</h2>
                                 <p>https://www.linkedin.com/in/rachellimruien/</p>
                             </div>
                         </button>
                     </Link>
-                    <Link className={styles.cardItemLink} to={""}>
+                    <Link className={styles.cardItemLink} to={"./resume_may24.pdf"} target="_blank" type="application/pdf">
                         <button className={styles.cardItem}>
                             <FrameSVGUnderline
                                 css={{
@@ -85,7 +108,7 @@ const Explore = () => {
                                     }
                                 }}
                             />
-                            <IoDocumentTextSharp  size={24} />
+                            <IoDocumentTextSharp size={24} />
                             <div className={styles.cardItemText}>
                                 <h2>View my resume</h2>
                             </div>

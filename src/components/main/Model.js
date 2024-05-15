@@ -9,15 +9,7 @@ export function Model(props) {
   const { nodes, materials } = useGLTF('/room.gltf')
   return (
     <group {...props} dispose={null}>
-         <PerspectiveCamera
-          makeDefault={true}
-          far={100}
-          near={0.1}
-          fov={38}
-          position={[5.219, 4.035, 12.839]}
-          rotation={[-0.018, 0.39, 0.007]}
-          
-        />
+        
       <group position={[0.4, -2, 0]}>
        
          
