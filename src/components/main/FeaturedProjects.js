@@ -1,11 +1,12 @@
 import styles from "../../styles/main/FeaturedProjects.module.css"
 import routourist from "../../assets/featured_projects/routouristThumbnail.png"
-import nf from "../../assets/featured_projects/nfThumbnail.png"
 import wth23 from "../../assets/featured_projects/wth23Thumbnail.png"
 import tiktok23 from "../../assets/featured_projects/tiktok23Thumbnail.png"
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom"
+import portential from "../../assets/projects/portentialThumbnail.png"
+import echoclass from "../../assets/projects/echoclassThumbnail.png"
 
 
 const FeaturedProjects = () => {
@@ -25,16 +26,39 @@ const FeaturedProjects = () => {
             demo: null,
             thumbnail: routourist
         },
-        nf24: {
-            name: "Night Fiesta 2024 Website",
-            note: "React.js",
+        tiktok23: {
+            name: "Tiktok Shop",
+            note: "Flutter App",
             desc:
                 `
-            Publicity website for my university's Night Fiesta 2024 event with a character personality quiz and a leaderboard.
+            [Tiktok Hackathon 2023 Top 12 Finalist] Our team's reimagination of the Tiktok Shop Tab, complete with community features and gamification.
+            `,
+            video: "https://youtu.be/xfWP2s8OpVU",
+            demo: "https://github.com/rappleit/tiktok_shop",
+            thumbnail: tiktok23
+        },
+        portential: {
+            name: "Portential",
+            note: "ReactJS, React Flow, Python",
+            desc:
+                `
+                [PSA Codesprint 2023 Top 15 Finalist] An AI powered HR tool to recommend suitable online courses and tailor personalised learning paths for employees to upskill with ease based on employer feedback.
+            `,
+            video: "https://youtu.be/Xw7mnYUVE5g?t=208",
+            demo: "https://github.com/rappleit/Portential",
+            thumbnail: portential
+        },
+        echoclass: {
+            name: "Echoclass",
+            note: "Next.js, Figma",
+            desc:
+                `
+                Learning management system for teachers to track student progress. Worked on frontend and revamped the UI design during my internship in Tinkertanker.
             `,
             video: null,
-            demo: "https://nightfiesta.sutdroot.com/",
-            thumbnail: nf,
+            demo: "https://www.echoclass.com/",
+            thumbnail: echoclass
+
         },
         wth23: {
             name: "What The Hack Hackathon 2023 Website",
@@ -47,17 +71,6 @@ const FeaturedProjects = () => {
             demo: "https://www.sutdwth.com/",
             thumbnail: wth23
 
-        },
-        tiktok23: {
-            name: "Tiktok Shop",
-            note: "Flutter App",
-            desc:
-                `
-            Our team's reimagination of the Tiktok Shop Tab, complete with community features and gamification. Selected for the Tiktok Hackathon 2023 Top 12 Finalists.
-            `,
-            video: "https://youtu.be/xfWP2s8OpVU",
-            demo: "https://github.com/rappleit/tiktok_shop",
-            thumbnail: tiktok23
         },
     }
 
@@ -97,7 +110,7 @@ const FeaturedProjects = () => {
 
                     <p className={styles.featured_desc}>{featuredProjectsList[Object.keys(featuredProjectsList)[selected]].desc}</p>
                     <div className={styles.featured_buttonContainer}>
-                        {(featuredProjectsList[Object.keys(featuredProjectsList)[selected]].demo) ? <Link className={styles.featured_link} to={featuredProjectsList[Object.keys(featuredProjectsList)[selected]].demo} target="_blank" rel="noopener noreferrer"><button className={styles.featured_demobutton} >Try it out</button></Link> : <></>}
+                        {(featuredProjectsList[Object.keys(featuredProjectsList)[selected]].demo) ? <Link className={styles.featured_link} to={featuredProjectsList[Object.keys(featuredProjectsList)[selected]].demo} target="_blank" rel="noopener noreferrer"><button className={styles.featured_demobutton} >Link</button></Link> : <></>}
                         {(featuredProjectsList[Object.keys(featuredProjectsList)[selected]].video) ? <Link className={styles.featured_link} to={featuredProjectsList[Object.keys(featuredProjectsList)[selected]].video} target="_blank" rel="noopener noreferrer"><button className={styles.featured_videobutton}>Watch Video</button></Link> : <></>}
                     </div>
                 </div>

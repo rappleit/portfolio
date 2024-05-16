@@ -9,6 +9,7 @@ import portenial from "./assets/projects/portentialThumbnail.png"
 import portfolio from "./assets/projects/portfolioThumbnail.png"
 import lailaitask from "./assets/projects/lailaitaskThumbnail.png"
 import makanwell from "./assets/projects/makanwellThumbnail.png"
+import medilingo from "./assets/projects/medilingoThumbnail.png"
 
 const ProjectsCollection = [
     {
@@ -72,9 +73,9 @@ const ProjectsCollection = [
         year: "2024",
         type: "Web",
         demo: "https://nightfiesta.sutdroot.com/",
-        github: "https://github.com/rappleit/MediLingo",
+        github: "",
         doc: "",
-        video: "https://youtu.be/LBIPTbmAqEM",
+        video: "",
         design: "",
         stack: [
             "ReactJS",
@@ -98,7 +99,7 @@ const ProjectsCollection = [
         ],
         org: "NUS HealthHack Hackathon 2024",
         note: "An AI powered tool for patients to ask questions about their medical reports and for doctors to build easy-to-understand clinical notes.",
-        thumbnail: "",
+        thumbnail: medilingo,
     },
     {
         name: "Portential",

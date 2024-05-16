@@ -60,7 +60,7 @@ const ProjectsList = () => {
                     </div> :
                     <div className={styles.detailMessage}>
                         <TbFolderQuestion className={styles.detailMessageIcon}/>
-                        <h3>{'>'} Please select a project to see more details</h3>
+                        <h3>{'<'} Please select a project to see more details</h3>
                     </div>
                     }
             </div>

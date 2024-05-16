@@ -169,6 +169,11 @@ td {
     text-align: center;
 }
 
+.detailMessage h3 {
+    margin: 0 24px;
+    font-size: 1rem;
+}
+
 .detailMessageIcon {
     font-size: 4rem;
 }
