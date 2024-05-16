@@ -96,7 +96,7 @@ const Explore = () => {
                             </div>
                         </button>
                     </Link>
-                    <Link className={styles.cardItemLink} to={"./resume_may24.pdf"} target="_blank" type="application/pdf">
+                    <Link className={styles.cardItemLink} to={"./resume.pdf"} target="_blank" type="application/pdf">
                         <button className={styles.cardItem}>
                             <FrameSVGUnderline
                                 css={{
