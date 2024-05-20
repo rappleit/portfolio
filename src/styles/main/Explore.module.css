@@ -77,8 +77,8 @@
 
 .cardItemLink {
     text-decoration: none;
-    overflow-wrap: break-word;
 }
+
 .cardItem {
     width: 100%;
     position: relative;
@@ -101,6 +101,10 @@
 
 .cardItem h2 {
     font-size: 1rem;
+}
+
+.cardItem p {
+    overflow-wrap: break-word;
 }
 
 

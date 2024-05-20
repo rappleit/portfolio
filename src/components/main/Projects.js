@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import archive from "../../assets/main/archive.png"
 import TextTransition, { presets } from 'react-text-transition';
 import { Link } from "react-router-dom";
-import { Dots, FrameSVGCorners } from "@arwes/react";
+import { Dots, FrameSVGCorners, FrameSVGNefrex } from "@arwes/react";
 const Projects = () => {
 
 
@@ -33,17 +33,7 @@ const Projects = () => {
             <div className={styles.content}>
                 <div className={styles.statsContainer}>
                     <div className={styles.statsCard}>
-                        <FrameSVGCorners
-                            strokeWidth={2}
-                            css={{
-                                '[data-name=bg]': {
-                                    color: 'rgb(256,256,256, 0)'
-                                },
-                                '[data-name=line]': {
-                                    color: 'hsl(180, 75%, 50%)'
-                                }
-                            }}
-                        />
+                        
                         <div className={styles.statsIcon}>
                             <CgWebsite />
                         </div>
@@ -53,17 +43,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className={styles.statsCard}>
-                        <FrameSVGCorners
-                            strokeWidth={2}
-                            css={{
-                                '[data-name=bg]': {
-                                    color: 'rgb(256,256,256, 0)'
-                                },
-                                '[data-name=line]': {
-                                    color: 'hsl(180, 75%, 50%)'
-                                }
-                            }}
-                        />
+                        
                         <div className={styles.statsIcon}>
                             <FaLaptopCode />
                         </div>
@@ -73,17 +53,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className={styles.statsCard}>
-                        <FrameSVGCorners
-                            strokeWidth={2}
-                            css={{
-                                '[data-name=bg]': {
-                                    color: 'rgb(256,256,256, 0)'
-                                },
-                                '[data-name=line]': {
-                                    color: 'hsl(180, 75%, 50%)'
-                                }
-                            }}
-                        />
+                       
                         <div className={styles.statsIcon}>
                             <FaMobileScreen />
                         </div>
@@ -93,17 +63,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className={styles.statsCard}>
-                        <FrameSVGCorners
-                            strokeWidth={2}
-                            css={{
-                                '[data-name=bg]': {
-                                    color: 'rgb(256,256,256, 0)'
-                                },
-                                '[data-name=line]': {
-                                    color: 'hsl(180, 75%, 50%)'
-                                }
-                            }}
-                        />
+                        
                         <div className={styles.statsIcon}>
                             <IoExtensionPuzzle />
                         </div>

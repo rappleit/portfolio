@@ -8,7 +8,7 @@ import { Animator, FrameSVGKranox, GridLines, Text } from "@arwes/react";
 const Experience = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("professional");
-    const [expandedIndex, setExpandedIndex] = useState(null);
+    const [expandedIndex, setExpandedIndex] = useState(0);
 
 
     const handleCategoryChange = () => {
@@ -18,7 +18,7 @@ const Experience = () => {
         } else {
             setSelectedCategory("professional")
         }
-        setExpandedIndex(null);
+        setExpandedIndex(0);
     }
 
     const handleCardToggle = (index) => {
