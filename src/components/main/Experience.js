@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/main/Experience.module.css"
 import ExperienceCardMobile from "./ExperienceCardMobile";
 import { Animator, FrameSVGKranox, GridLines, Text } from "@arwes/react";
+import { IoChevronForward } from "react-icons/io5";
 
 const Experience = () => {
 
@@ -92,7 +93,7 @@ const Experience = () => {
     ]
     return (
         <div className={styles.main}>
-            
+
             <div className={styles.header}>
                 <h2>My Experience</h2>
             </div>
@@ -131,6 +132,11 @@ const Experience = () => {
                                 <p className={styles.experienceCardDate}>{item.duration}</p>
                                 <h3>{item.title}</h3>
                                 <p className={styles.experienceCardTeam}>{item.team}</p>
+                                <div className={styles.experienceCardIconContainer}>
+                                    <div className={styles.experienceCardIcon}>
+                                        <IoChevronForward />
+                                    </div>
+                                </div>
                             </div>
                         )) : extracurricularExperienceList.map((item, i) => (
                             <div
@@ -140,6 +146,11 @@ const Experience = () => {
                                 <p className={styles.experienceCardDate}>{item.duration}</p>
                                 <h3>{item.title}</h3>
                                 <p className={styles.experienceCardTeam}>{item.team}</p>
+                                <div className={styles.experienceCardIconContainer}>
+                                    <div className={styles.experienceCardIcon}>
+                                        <IoChevronForward />
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

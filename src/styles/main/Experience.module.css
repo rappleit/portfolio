@@ -162,16 +162,44 @@
 .experienceCard {
     border: 2px solid var(--secondary);
     width: 100%;
-    padding: 6px;
+    padding-left: 10px;
+    padding-top: 10px;
     box-sizing: border-box;
     border-top: none;
     border-left: none;
     cursor: pointer;
+    position: relative;
+}
+
+.experienceCardIconContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.experienceCardIcon {
+    border-left: 2px solid;
+    border-top: 2px solid;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg)
 }
 
 .experienceCard h3 {
     font-size: 0.9rem;
     margin: 2px 0;
+}
+
+.experienceCardProfessional .experienceCardIcon {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.experienceCardExtracurricular .experienceCardIcon {
+    border-color: var(--secondary);
+    background-color: var(--secondary);
 }
 
 .experienceCard p {

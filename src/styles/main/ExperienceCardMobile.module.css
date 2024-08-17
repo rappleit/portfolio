@@ -1,7 +1,7 @@
 .expcard_main {
     border: 2px solid var(--secondary);
     width: 80vw;
-    padding: 12px;
+    
     box-sizing: border-box;
     border-top: none;
     border-left: none;
@@ -44,3 +44,29 @@
     margin: 12px 0;
 }
 
+.experienceCardIconContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.experienceCardIcon {
+    border-left: 2px solid;
+    border-top: 2px solid;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg)
+}
+
+
+.expcard_professional .experienceCardIcon {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.expcard_extracurricular .experienceCardIcon {
+    border-color: var(--secondary);
+    background-color: var(--secondary);
+}
