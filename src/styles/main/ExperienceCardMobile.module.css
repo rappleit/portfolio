@@ -70,3 +70,13 @@
     border-color: var(--secondary);
     background-color: var(--secondary);
 }
+
+.expcard_certifications {
+    background: var(--tertiary-light);
+    border-color: var(--tertiary);
+}
+
+.expcard_certifications .experienceCardIcon {
+    border-color: var(--tertiary);
+    background-color: var(--tertiary);
+}

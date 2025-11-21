@@ -33,7 +33,7 @@ const Footer = () => {
             </Animator>
             <div className={styles.footerContent}>
                 <p>Designed and developed in React.js with 3D assets made in Blender by yours truly.</p>
-                <p className={styles.footerHighlight}>© 2024 Rachel Lim</p>
+                <p className={styles.footerHighlight}>© 2025 Rachel Lim</p>
             </div>
         </div>
     );

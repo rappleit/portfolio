@@ -38,7 +38,7 @@ const Projects = () => {
                             <CgWebsite />
                         </div>
                         <div className={styles.statsContent}>
-                            <h2>03</h2>
+                            <h2>04</h2>
                             <p>Static Websites</p>
                         </div>
                     </div>
@@ -69,12 +69,11 @@ const Projects = () => {
                         </div>
                         <div className={styles.statsContent}>
                             <h2>01</h2>
-                            <p>Browser Extension</p>
+                            <p>Product Concept</p>
                         </div>
                     </div>
                 </div>
                 <div className={styles.featuredContainer}>
-                    <h2>Featured Projects</h2>
                     <FeaturedProjects />
                 </div>
                 <div className={styles.archiveContainer}>

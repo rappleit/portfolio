@@ -2,6 +2,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import './App.css';
 import Main from './pages/Main';
 import ProjectsPage from './pages/ProjectsPage';
+import SpotlightPage from './pages/SpotlightPage';
 import { Global } from '@emotion/react';
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
             <Route
               path="/projects"
               element={<ProjectsPage />} />
+            <Route
+              path="/spotlight/:id"
+              element={<SpotlightPage />} />
           </Routes>
         </BrowserRouter>
       </div>
