@@ -106,7 +106,7 @@ const Experience = () => {
         {
             title: "Frontend Engineer",
             team: "Metabob",
-            duration: "Aug 2024 - Dec 2024",
+            duration: "Jun 2025 - Aug 2025",
             subtitle: "San Francisco, USA",
             content: [
                 "Redesigned and developed a ReactJS-based SaaS platform for enterprise clients, with GitHub OAuth integration and core feature implementations"
